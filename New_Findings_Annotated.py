@@ -43,6 +43,7 @@ def non_factor(use, primes, limit):
         else:
             Boo=True
     return i
+
 # def is_it_prime(use, primes, limit):
 #     i=0
 #     Boo=True
@@ -140,6 +141,9 @@ def massprimeduction(limitations):
         #print(prime, end=" ")
         #store_primes(prime)
     time_check(Time)
+
+    for i in Opposite_non_primes:
+        store_non_primes(i)
 if __name__ == "__main__":
     Input=input("What is the Limit?\n")
     Input=int(Input)

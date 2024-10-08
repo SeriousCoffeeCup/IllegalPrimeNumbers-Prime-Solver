@@ -40,7 +40,7 @@ def test_massprimeduction():
     """
     Decorator must precede a newly created function.
     """
-    New_Findings_Annotated.massprimeduction(200)
+    New_Findings_Annotated.massprimeduction(1000)
 
 if __name__ == "__main__":
     test_massprimeduction()
