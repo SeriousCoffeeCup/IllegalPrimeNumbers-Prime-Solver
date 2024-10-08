@@ -126,6 +126,7 @@ def massprimeduction(limitations):
         #print(prime, end=" ")
         #store_primes(prime)
     print(time_check(Time))
-Input=input("What is the Limit?\n")
-Input=int(Input)
-massprimeduction(Input)
+if __name__ == "__main__":
+    Input=input("What is the Limit?\n")
+    Input=int(Input)
+    massprimeduction(Input)
