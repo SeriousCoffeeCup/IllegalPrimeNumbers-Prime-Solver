@@ -19,6 +19,14 @@ def new_limit(use, primes):
     j +=1
     return j
 def time_check(Time):
+    current_time = datetime.datetime.now()
+    t_diff = current_time - Time
+
+    formatted_print = f"{t_diff.seconds + (t_diff.microseconds/1000000):.7} seconds" # Formatted with units. More options can be added here
+
+    print(formatted_print) # Every time_check call has been to print. Centralizing print() -> we can mass change formatting.
+
+
     return(datetime.datetime.now()-Time)
 def known_non_primes(use,non_primes,limit, indicate):
     if indicate==True:
@@ -60,7 +68,7 @@ def prime_factors(use, primes, limit):
         return use
 def list_update(use, primes, limit, count_list, reset_list, non_primes, indicate, time):
     if use>limit[0]:
-        print(time_check(time))
+        time_check(time)
         print("New Milestone")
         limit[2]=limit[0]*1
         limit[0] *=primes[limit[1]]
@@ -125,7 +133,7 @@ def massprimeduction(limitations):
     #for prime in massprimeduction.Primes:
         #print(prime, end=" ")
         #store_primes(prime)
-    print(time_check(Time))
+    time_check(Time)
 if __name__ == "__main__":
     Input=input("What is the Limit?\n")
     Input=int(Input)
