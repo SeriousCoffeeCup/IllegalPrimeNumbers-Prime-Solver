@@ -35,7 +35,7 @@ def profile_this_function(func):
 
     return wrapper
 
-@profile_this_function
+# @profile_this_function
 def test_massprimeduction():
     """
     Decorator must precede a newly created function.

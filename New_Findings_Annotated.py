@@ -43,15 +43,21 @@ def non_factor(use, primes, limit):
         else:
             Boo=True
     return i
-def is_it_prime(use, primes, limit):
-    i=0
-    Boo=True
-    while (Boo==True) and (i<limit):
-        if use%primes[i]!=0:
-            i +=1
-        else:
-            Boo=False
-    return Boo
+# def is_it_prime(use, primes, limit):
+#     i=0
+#     Boo=True
+#     while (Boo==True) and (i<limit):
+#         if use%primes[i]!=0:
+#             i +=1
+#         else:
+#             Boo=False
+#     return Boo
+
+def is_it_prime(curr_num, primes, limit):
+    for i in range(0, limit, 1):
+        if curr_num%primes[i]==0:
+            return False
+    return True
 def prime_factors(use, primes, limit):
     user=use+0
     i=0
@@ -97,7 +103,7 @@ def counter(count_list, reset_list):
 def massprimeduction(limitations):
     using=11
     Time=datetime.datetime.now()
-    massprimeduction.Primes=[2,3,5,7,11]
+    massprimeduction.Primes=[2,3,5,7,11] # You can do that? massprimeduction isn't a Class. So... what is this an attribute of?
     for i in massprimeduction.Primes:
         store_primes(i)
     Limit=[30,3,6]
